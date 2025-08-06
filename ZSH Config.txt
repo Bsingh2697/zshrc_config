@@ -1,46 +1,39 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\csgray\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+# Load zsh-autosuggestions
+source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-\f0\fs22 \cf2 \CocoaLigature0 # Load zsh-autosuggestions\
-source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh\
-\
-# Load fzf keybindings and completion\
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh\
-\
-# Optional: enable syntax highlighting (install first with brew)\
-# brew install zsh-syntax-highlighting \
-# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\
-\
-# History settings\
-HISTSIZE=10000\
-SAVEHIST=10000\
-HISTFILE=~/.zsh_history\
-setopt HIST_IGNORE_ALL_DUPS\
-setopt HIST_FIND_NO_DUPS\
-\
-# Autosuggestions highlight color (grey)\
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'\
-\
-# Ensure completion works\
-autoload -Uz compinit && compinit\
-\
-export PATH="/usr/local/opt/node@20/bin:$PATH"\
-\
-# Git aliases\
-Alias ga=\'93git add\'94\
-alias gs="git status"\
-alias gc="git commit"\
-alias gp="git push"\
-\
-# Other Aliases\
-alias c="clear" \
-alias ..=\'91cd ..\'92\
-alias gpl="git pull"\
-\
-#Theming\
-ZSH_THEME = "agnoster"\
-}
+# Load fzf keybindings and completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Optional: enable syntax highlighting (install first with brew)
+# brew install zsh-syntax-highlighting
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# History settings
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+
+# Autosuggestions highlight color (grey)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+
+# Ensure completion works
+autoload -Uz compinit && compinit
+
+export PATH="/usr/local/opt/node@20/bin:$PATH"
+
+
+# Git aliases
+alias ga="git add"
+alias gs="git status"
+alias gc="git commit"
+alias gp="git push"
+
+# Other Aliases
+alias c="clear"
+alias ..='cd ..'
+alias gpl="git pull"
+
+#Theming
+ZSH_THEME = "agnoster"
